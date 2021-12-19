@@ -1,0 +1,38 @@
+.listItem__wrapper {
+    /* color: red; */
+    list-style: none;
+    display: flex;
+    border: 1px solid var(--colorBorder);
+    border-radius: 1rem;
+    margin: 1rem 0;
+    max-width: 80vw;
+    padding: 1rem;
+}
+
+.listItem__image {
+    max-width: 150px;
+    max-height: 150px;
+    border-radius: 50%;
+    margin-right: 2rem;
+}
+
+.listItem__name {
+    color: #c9d1d9;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.listItem__link:visited,
+.listItem__link:link {
+    color: var(--colorLink);
+    text-decoration: none;
+}
+
+.listItem__link:hover {
+    text-decoration: underline;
+}
+
+.listItem__description {
+    font-weight: 300;
+    margin-top: 0;
+}

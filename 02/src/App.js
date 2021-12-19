@@ -1,9 +1,69 @@
-import React from 'react';
+import React from "react";
+import ListWrapper from "./components/ListWrapper/ListWrapper.js";
+import Form from "./components/Form/Form";
 
-const App = () => (
-    <div>
-        <h1>Hello World</h1>
-    </div>
-);
+const initialStateItems = [
+    {
+        image: "https://avatars.githubusercontent.com/u/8742357?v=4",
+        name: "Damian Moliński",
+        description: "Optimist, father, miner and passionate web developer.",
+        twitterLink: "https://github.com/molinskidamian",
+    },
+    {
+        image: "https://miro.medium.com/max/3150/1*xxVEfOOAmIKHWOUloRKLhw.jpeg",
+        name: "Dan Abramov",
+        // description: 'Working on @reactjs. The demo guy.',
+        twitterLink: "https://twitter.com/dan_abramov",
+    },
+    {
+        image: "https://miro.medium.com/max/3150/1*xxVEfOOAmIKHWOUloRKLhw.jpeg",
+        name: "Ryan Florence",
+        description:
+            "Making React accessible for users and developers at https://reach.tech . Online learning, workshops, OSS, and consulting.",
+        twitterLink: "https://twitter.com/ryanflorence",
+    },
+    {
+        image: "https://miro.medium.com/max/3150/1*xxVEfOOAmIKHWOUloRKLhw.jpeg",
+        name: "Michael Jackson",
+        description:
+            "Maker. Co-author of React Router. Working on @ReactTraining. Created @unpkg. Head over heels for @cari.",
+        twitterLink: "https://twitter.com/mjackson",
+    },
+    {
+        image: "https://miro.medium.com/max/3150/1*xxVEfOOAmIKHWOUloRKLhw.jpeg",
+        name: "Kent C. Dodds",
+        description:
+            "Making software development more accessible · Husband, Father, Latter-day Saint, Teacher, OSS, GDE, @TC39 · @PayPalEng @eggheadio @FrontendMasters · #JS",
+        twitterLink: "https://twitter.com/kentcdodds",
+    },
+];
+class App extends React.Component {
+    state = { items: [...initialStateItems] };
+
+    addItem = (e) => {
+        e.preventDefault();
+        console.log("click");
+
+        const newItem = {
+            name: e.target[0].value,
+            twitterLink: e.target[1].value,
+            image: e.target[2].value,
+            description: e.target[3].value,
+        };
+
+        this.setState((prevState) => ({
+            items: [...prevState.items, newItem],
+        }));
+    };
+
+    render() {
+        return (
+            <div className="wrapper">
+                <ListWrapper items={this.state.items} />
+                <Form submitFn={this.addItem} />
+            </div>
+        );
+    }
+}
 
 export default App;

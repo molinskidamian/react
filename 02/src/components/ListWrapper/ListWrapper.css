@@ -1,0 +1,6 @@
+.listWrapper__wrapper {
+    /* outline: 1px dashed red; */
+    list-style: none;
+    align-items: center;
+    padding-right: 1rem;
+}

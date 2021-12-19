@@ -1,0 +1,66 @@
+:root {
+    --border-radius: 0.3rem;
+    --background-color--input: #30363d;
+    --background-color--button: #21262d;
+    --color--button: #c9d1d9;
+    --color-border--button: #373b43;
+    --color-border--button-hover: #8c949e;
+    --background-color--button-hover: #30363d;
+    --color--placeholder: #484f58;
+}
+
+::placeholder {
+    color: var(--color--placeholder);
+}
+
+input,
+textarea {
+    border: 1px solid var(--background-color--input);
+    border-radius: var(--border-radius);
+    background-color: #0d1116;
+    padding: 0.3rem 1rem;
+    min-width: 12rem;
+    margin-bottom: 1rem;
+    color: #c9d1d9;
+}
+
+input,
+textarea:focus {
+    outline: none;
+    /* outline: 1px solid #1f6eeb; */
+    /* border: 1px solid #1f6eeb; */
+}
+
+input:active {
+}
+
+textarea {
+    min-height: 6rem;
+}
+
+.form__wrapper {
+    /* outline: 1px dashed yellow; */
+    margin: 1rem 0;
+    padding-left: 1rem;
+    border-left: 1px solid #21262d;
+    max-width: 20vw;
+    max-width: 10rem;
+}
+
+.form__title {
+    
+}
+
+.form__button {
+    background-color: var(--background-color--button);
+    color: var(--color--button);
+    border: 1px solid var(--color-border--button);
+    border-radius: var(--border-radius);
+    padding: 0.5rem 1rem;
+}
+
+.form__button:hover {
+    border: 1px solid var(--color-border--button-hover);
+    background-color: var(--background-color--button-hover);
+    transition: all 0.2s ease-out;
+}

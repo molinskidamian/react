@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap");
+
+:root {
+    --colorBgMain: #0d1116;
+    --colorFont: #8c949e;
+    --colorBorder: #30363d;
+    --colorLink: #57a6ff;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    /* font-family: 'Lato', sans-serif; */
+    font-family: "Montserrat", sans-serif;
+    /* font-family: 'Open Sans', sans-serif; */
+    /* font-family: 'Roboto', sans-serif; */
+    font-size: 16px;
+    background-color: var(--colorBgMain);
+    color: var(--colorFont);
+}
+
+.wrapper {
+    display: flex;
+}
